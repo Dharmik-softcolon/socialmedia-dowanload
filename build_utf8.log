@@ -1,0 +1,200 @@
+﻿
+> mediagrab@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.15
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+npm : Failed to compile.
+At line:1 char:1
++ npm run build > 
+build.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Fai  
+  led to compile.:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+./app/layout.tsx
+Error: 
+  [31mx[0m the name 
+`RootLayout` is defined 
+multiple times
+    ,-[[36;1;4mD:\Product-
+base\Video-dowanloder\app\l
+ayout.tsx[0m:19:1]
+ [2m19[0m |     ],
+ [2m20[0m | };
+ [2m21[0m | 
+ [2m22[0m | export 
+default function 
+RootLayout({
+    : [31;1m              
+          ^^^^^|^^^^[0m
+    :                      
+        [31;1m`-- 
+[31;1mprevious definition 
+of `RootLayout` 
+here[0m[0m
+ [2m23[0m |              
+                          
+children,
+ [2m24[0m |              
+                      }: {
+ [2m25[0m |     
+children: React.ReactNode;
+ [2m26[0m | }) {
+ [2m27[0m |     return (
+ [2m28[0m |         
+<html lang="en" 
+suppressHydrationWarning>
+ [2m29[0m |         
+<body 
+className="min-h-screen 
+flex flex-col">
+ [2m30[0m |         
+<ThemeProvider
+ [2m31[0m |             
+attribute="class"
+ [2m32[0m |             
+defaultTheme="system"
+ [2m33[0m |             
+enableSystem
+ [2m34[0m |             
+disableTransitionOnChange
+ [2m35[0m |         >
+ [2m36[0m |             
+<Navbar />
+ [2m37[0m |             
+<main className="flex-1">{c
+hildren}</main>
+ [2m38[0m |             
+<Footer />
+ [2m39[0m |             
+<Toaster />
+ [2m40[0m |         
+</ThemeProvider>
+ [2m41[0m |         
+</body>
+ [2m42[0m |         
+</html>
+ [2m43[0m |     );
+ [2m44[0m | }export 
+default function 
+RootLayout({ children }: 
+any){ return <html><body>{c
+hildren}</body></html> }
+    : [33;1m              
+           ^^^^^|^^^^[0m
+    :                      
+         [33;1m`-- 
+[33;1m`RootLayout` 
+redefined here[0m[0m
+    `----
+
+  [31mx[0m the name 
+`default` is exported 
+multiple times
+    ,-[[36;1;4mD:\Product-
+base\Video-dowanloder\app\l
+ayout.tsx[0m:19:1]
+ [2m19[0m |         ],
+ [2m20[0m |     };
+ [2m21[0m |     
+ [2m22[0m | [31;1m,[0m
+[31;1m-[0m[31;1m>[0m 
+export default function 
+RootLayout({
+ [2m23[0m | [31;1m|[0m 
+                           
+              children,
+ [2m24[0m | [31;1m|[0m 
+                           
+          }: {
+ [2m25[0m | [31;1m|[0m 
+      children: 
+React.ReactNode;
+ [2m26[0m | [31;1m|[0m 
+  }) {
+ [2m27[0m | [31;1m|[0m 
+      return (
+ [2m28[0m | [31;1m|[0m 
+          <html lang="en" 
+suppressHydrationWarning>
+ [2m29[0m | [31;1m|[0m 
+          <body 
+className="min-h-screen 
+flex flex-col">
+ [2m30[0m | [31;1m|[0m 
+          <ThemeProvider
+ [2m31[0m | [31;1m|[0m 
+              
+attribute="class"
+ [2m32[0m | [31;1m|[0m 
+              
+defaultTheme="system"
+ [2m33[0m | [31;1m|[0m 
+              enableSystem
+ [2m34[0m | [31;1m|[0m 
+              
+disableTransitionOnChange
+ [2m35[0m | [31;1m|[0m 
+          >
+ [2m36[0m | [31;1m|[0m 
+              <Navbar />
+ [2m37[0m | [31;1m|[0m 
+              <main classNa
+me="flex-1">{children}</mai
+n>
+ [2m38[0m | [31;1m|[0m 
+              <Footer />
+ [2m39[0m | [31;1m|[0m 
+              <Toaster />
+ [2m40[0m | [31;1m|[0m 
+          </ThemeProvider>
+ [2m41[0m | [31;1m|[0m 
+          </body>
+ [2m42[0m | [31;1m|[0m 
+          </html>
+ [2m43[0m | [31;1m|[0m 
+      );
+ [2m44[0m | [31;1m|[0m
+[31;1m-[0m[31;1m>[0m 
+}export default function 
+RootLayout({ children }: 
+any){ return <html><body>{c
+hildren}</body></html> }
+    : [31;1m`[0m[31;1m--
+-[0m[33;1m ^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^|^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^[0m
+    : 
+[31;1m`[0m[31;1m---[0m 
+                           
+                       
+[33;1m`-- [33;1mexported 
+more than once[0m[0m
+    : [31;1m`[0m[31;1m--
+-[0m[31;1m-[0m 
+[31;1mprevious exported 
+here[0m
+    `----
+
+Error: 
+  [36m>[0m Exported 
+identifiers must be unique
+
+Import trace for requested 
+module:
+./app/layout.tsx
+
+
+> Build failed because of 
+webpack errors

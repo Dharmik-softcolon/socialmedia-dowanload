@@ -1,0 +1,331 @@
+﻿
+> mediagrab@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.15
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+npm : Failed to compile.
+At line:1 char:1
++ npm run build > 
+build2.log 2>&1; 
+Get-Content build2.log | 
+Out-File -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Fai  
+  led to compile.:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+./app/globals.css.webpack[j
+avascript/auto]!=!./node_mo
+dules/next/dist/build/webpa
+ck/loaders/css-loader/src/i
+ndex.js??ruleSet[1].rules[1
+4].oneOf[12].use[2]!./node_
+modules/next/dist/build/web
+pack/loaders/postcss-loader
+/src/index.js??ruleSet[1].r
+ules[14].oneOf[12].use[3]!.
+/app/globals.css
+ReferenceError: module is 
+not defined in ES module 
+scope
+This file is being treated 
+as an ES module because it 
+has a '.js' file extension 
+and 'D:\Product-base\Video-
+dowanloder\package.json' 
+contains "type": "module". 
+To treat it as a CommonJS 
+script, rename it to use 
+the '.cjs' file extension.
+    at file:///D:/Product-b
+ase/Video-dowanloder/postcs
+s.config.js:1:1
+    at ModuleJob.run (node:
+internal/modules/esm/module
+_job:263:25)
+    at async 
+ModuleLoader.import (node:i
+nternal/modules/esm/loader:
+540:24)
+    at async findConfig (D:
+\Product-base\Video-dowanlo
+der\node_modules\next\dist\
+lib\find-config.js:85:25)
+    at async 
+getPostCssPlugins (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\build\
+webpack\config\blocks\css\p
+lugins.js:89:18)
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\config\blocks\css\index.j
+s:124:36
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\loaders\postcss-loader\sr
+c\index.js:51:40
+    at async 
+Span.traceAsyncFn (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\trace\
+trace.js:154:20)
+
+Import trace for requested 
+module:
+./app/globals.css.webpack[j
+avascript/auto]!=!./node_mo
+dules/next/dist/build/webpa
+ck/loaders/css-loader/src/i
+ndex.js??ruleSet[1].rules[1
+4].oneOf[12].use[2]!./node_
+modules/next/dist/build/web
+pack/loaders/postcss-loader
+/src/index.js??ruleSet[1].r
+ules[14].oneOf[12].use[3]!.
+/app/globals.css
+./app/globals.css
+
+./app/globals.css
+ReferenceError: module is 
+not defined in ES module 
+scope
+This file is being treated 
+as an ES module because it 
+has a '.js' file extension 
+and 'D:\Product-base\Video-
+dowanloder\package.json' 
+contains "type": "module". 
+To treat it as a CommonJS 
+script, rename it to use 
+the '.cjs' file extension.
+    at file:///D:/Product-b
+ase/Video-dowanloder/postcs
+s.config.js:1:1
+    at ModuleJob.run (node:
+internal/modules/esm/module
+_job:263:25)
+    at async 
+ModuleLoader.import (node:i
+nternal/modules/esm/loader:
+540:24)
+    at async findConfig (D:
+\Product-base\Video-dowanlo
+der\node_modules\next\dist\
+lib\find-config.js:85:25)
+    at async 
+getPostCssPlugins (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\build\
+webpack\config\blocks\css\p
+lugins.js:89:18)
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\config\blocks\css\index.j
+s:124:36
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\loaders\postcss-loader\sr
+c\index.js:51:40
+    at async 
+Span.traceAsyncFn (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\trace\
+trace.js:154:20)
+    at 
+tryRunOrWebpackError (D:\Pr
+oduct-base\Video-dowanloder
+\node_modules\next\dist\com
+piled\webpack\bundle5.js:28
+:312989)
+    at 
+__webpack_require_module__ 
+(D:\Product-base\Video-dowa
+nloder\node_modules\next\di
+st\compiled\webpack\bundle5
+.js:28:131165)
+    at __nested_webpack_req
+uire_153728__ (D:\Product-b
+ase\Video-dowanloder\node_m
+odules\next\dist\compiled\w
+ebpack\bundle5.js:28:130607
+)
+    at D:\Product-base\Vide
+o-dowanloder\node_modules\n
+ext\dist\compiled\webpack\b
+undle5.js:28:131454
+    at symbolIterator (D:\P
+roduct-base\Video-dowanlode
+r\node_modules\next\dist\co
+mpiled\neo-async\async.js:1
+:14444)
+    at done (D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\compiled\neo
+-async\async.js:1:14824)
+    at Hook.eval [as 
+callAsync] (eval at create 
+(D:\Product-base\Video-dowa
+nloder\node_modules\next\di
+st\compiled\webpack\bundle5
+.js:13:28858), 
+<anonymous>:15:1)
+    at 
+Hook.CALL_ASYNC_DELEGATE 
+[as _callAsync] (D:\Product
+-base\Video-dowanloder\node
+_modules\next\dist\compiled
+\webpack\bundle5.js:13:2601
+2)
+    at D:\Product-base\Vide
+o-dowanloder\node_modules\n
+ext\dist\compiled\webpack\b
+undle5.js:28:130328
+    at symbolIterator (D:\P
+roduct-base\Video-dowanlode
+r\node_modules\next\dist\co
+mpiled\neo-async\async.js:1
+:14402)
+-- inner error --
+ReferenceError: module is 
+not defined in ES module 
+scope
+This file is being treated 
+as an ES module because it 
+has a '.js' file extension 
+and 'D:\Product-base\Video-
+dowanloder\package.json' 
+contains "type": "module". 
+To treat it as a CommonJS 
+script, rename it to use 
+the '.cjs' file extension.
+    at file:///D:/Product-b
+ase/Video-dowanloder/postcs
+s.config.js:1:1
+    at ModuleJob.run (node:
+internal/modules/esm/module
+_job:263:25)
+    at async 
+ModuleLoader.import (node:i
+nternal/modules/esm/loader:
+540:24)
+    at async findConfig (D:
+\Product-base\Video-dowanlo
+der\node_modules\next\dist\
+lib\find-config.js:85:25)
+    at async 
+getPostCssPlugins (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\build\
+webpack\config\blocks\css\p
+lugins.js:89:18)
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\config\blocks\css\index.j
+s:124:36
+    at async D:\Product-bas
+e\Video-dowanloder\node_mod
+ules\next\dist\build\webpac
+k\loaders\postcss-loader\sr
+c\index.js:51:40
+    at async 
+Span.traceAsyncFn (D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\trace\
+trace.js:154:20)
+    at Object.<anonymous> (
+D:\Product-base\Video-dowan
+loder\node_modules\next\dis
+t\build\webpack\loaders\css
+-loader\src\index.js??ruleS
+et[1].rules[14].oneOf[12].u
+se[2]!D:\Product-base\Video
+-dowanloder\node_modules\ne
+xt\dist\build\webpack\loade
+rs\postcss-loader\src\index
+.js??ruleSet[1].rules[14].o
+neOf[12].use[3]!D:\Product-
+base\Video-dowanloder\app\g
+lobals.css:1:7)
+    at D:\Product-base\Vide
+o-dowanloder\node_modules\n
+ext\dist\compiled\webpack\b
+undle5.js:28:922493
+    at Hook.eval [as call] 
+(eval at create (D:\Product
+-base\Video-dowanloder\node
+_modules\next\dist\compiled
+\webpack\bundle5.js:13:2863
+6), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE 
+[as _call] (D:\Product-base
+\Video-dowanloder\node_modu
+les\next\dist\compiled\webp
+ack\bundle5.js:13:25906)
+    at D:\Product-base\Vide
+o-dowanloder\node_modules\n
+ext\dist\compiled\webpack\b
+undle5.js:28:131198
+    at 
+tryRunOrWebpackError (D:\Pr
+oduct-base\Video-dowanloder
+\node_modules\next\dist\com
+piled\webpack\bundle5.js:28
+:312943)
+    at 
+__webpack_require_module__ 
+(D:\Product-base\Video-dowa
+nloder\node_modules\next\di
+st\compiled\webpack\bundle5
+.js:28:131165)
+    at __nested_webpack_req
+uire_153728__ (D:\Product-b
+ase\Video-dowanloder\node_m
+odules\next\dist\compiled\w
+ebpack\bundle5.js:28:130607
+)
+    at D:\Product-base\Vide
+o-dowanloder\node_modules\n
+ext\dist\compiled\webpack\b
+undle5.js:28:131454
+    at symbolIterator (D:\P
+roduct-base\Video-dowanlode
+r\node_modules\next\dist\co
+mpiled\neo-async\async.js:1
+:14444)
+
+Generated code for D:\Produ
+ct-base\Video-dowanloder\no
+de_modules\next\dist\build\
+webpack\loaders\css-loader\
+src\index.js??ruleSet[1].ru
+les[14].oneOf[12].use[2]!D:
+\Product-base\Video-dowanlo
+der\node_modules\next\dist\
+build\webpack\loaders\postc
+ss-loader\src\index.js??rul
+eSet[1].rules[14].oneOf[12]
+.use[3]!D:\Product-base\Vid
+eo-dowanloder\app\globals.c
+ss
+
+Import trace for requested 
+module:
+./app/globals.css
+
+
+> Build failed because of 
+webpack errors

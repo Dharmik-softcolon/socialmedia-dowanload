@@ -1,0 +1,69 @@
+﻿
+> mediagrab@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.15
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/8) ...
+npm : [extract-audio] 
+Error: Dynamic server 
+usage: Route 
+/api/extract-audio 
+couldn't be rendered 
+statically because it used 
+`request.headers`. See 
+more info here: https://nex
+tjs.org/docs/messages/dynam
+ic-server-error
+At line:1 char:1
++ npm run build > 
+build5.log 2>&1; 
+Get-Content build5.log | 
+Out-File -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo         
+     : NotSpecified: ([ex  
+  tract-audio]...ic-serv   
+ er-error:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+   Generating static pages (2/8) 
+   Generating static pages (4/8) 
+[download] Error: Dynamic 
+server usage: Route 
+/api/download couldn't be 
+rendered statically 
+because it used 
+`request.headers`. See 
+more info here: https://nex
+tjs.org/docs/messages/dynam
+ic-server-error
+   Generating static pages (6/8) 
+ ✓ Generating static pages (8/8)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    15.2 kB         119 kB
+├ ○ /_not-found                          873 B            88 kB
+├ ƒ /api/download                        0 B                0 B
+├ ƒ /api/extract-audio                   0 B                0 B
+├ ƒ /api/process-url                     0 B                0 B
+└ ƒ /api/upload-convert                  0 B                0 B
++ First Load JS shared by all            87.1 kB
+  ├ chunks/117-19acfc1229730785.js       31.6 kB
+  ├ chunks/fd9d1056-7a7bab8e2c11427f.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
