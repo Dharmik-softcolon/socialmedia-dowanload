@@ -65,6 +65,9 @@ export async function GET(request: NextRequest) {
             const stream = createReadStream(job.filePath);
             const webStream = Readable.toWeb(stream) as ReadableStream;
 
+            // Schedule cleanup after streaming
+            setTimeout(() => removeJob(jobId), 10_000);
+
             return new NextResponse(webStream, {
                 status: 200,
                 headers: {

@@ -102,6 +102,10 @@ export async function cleanupExpiredFiles(): Promise<void> {
         if (now - job.createdAt > FILE_TTL_MS) {
             try {
                 await fs.unlink(job.filePath);
+                const metaPath = getTempPath(`${id}.json`);
+                if (existsSync(metaPath)) {
+                    await fs.unlink(metaPath);
+                }
             } catch {
                 /* ignore */
             }
