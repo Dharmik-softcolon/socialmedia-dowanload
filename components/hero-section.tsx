@@ -4,7 +4,7 @@ import { Download, Zap, Shield, Smartphone } from "lucide-react";
 
 export function HeroSection() {
     return (
-        <section className="relative pt-32 pb-12 sm:pt-40 sm:pb-16 overflow-hidden">
+        <section className="relative pt-24 pb-10 sm:pt-40 sm:pb-16 overflow-hidden">
             {/* Background gradient blobs */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-3xl" />
@@ -20,14 +20,14 @@ export function HeroSection() {
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-slide-up">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 animate-slide-up leading-tight">
                     Download & Convert{" "}
                     <span className="gradient-text">Media</span>{" "}
                     From Anywhere
                 </h1>
 
                 {/* Subheadline */}
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "100ms" }}>
+                <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 animate-slide-up" style={{ animationDelay: "100ms" }}>
                     Grab videos from YouTube, Instagram & Facebook. Extract audio to MP3.
                     Convert uploaded videos — all in one place.
                 </p>

@@ -34,14 +34,14 @@ export function Tabs({ tabs, defaultTab, onChange, children, className }: TabsPr
                         key={tab.id}
                         onClick={() => handleChange(tab.id)}
                         className={cn(
-                            "flex-1 flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200",
+                            "flex-1 flex items-center justify-center gap-1.5 sm:gap-2 rounded-lg px-2 py-2 sm:px-4 sm:py-2.5 text-[13px] sm:text-sm font-medium transition-all duration-200",
                             active === tab.id
                                 ? "bg-background text-foreground shadow-sm"
                                 : "text-muted-foreground hover:text-foreground"
                         )}
                     >
                         {tab.icon}
-                        {tab.label}
+                        <span className="truncate">{tab.label}</span>
                     </button>
                 ))}
             </div>

@@ -39,15 +39,7 @@ export function Navbar() {
 
                 {/* Right side */}
                 <div className="flex items-center gap-2">
-                    <a
-                        href="https://github.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub"
-                        className="inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-lg"
-                    >
-                        <Github className="h-4.5 w-4.5" />
-                    </a>
+
                     {mounted && (
                         <Button
                             variant="ghost"

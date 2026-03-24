@@ -27,8 +27,8 @@ export default function HomePage() {
             <HeroSection />
 
             {/* Main Tool Section */}
-            <section className="mx-auto max-w-2xl px-4 sm:px-6 -mt-2 relative z-10">
-                <Card glass className="p-6 sm:p-8">
+            <section className="mx-auto max-w-2xl px-3 sm:px-6 -mt-2 sm:-mt-6 relative z-10 w-full">
+                <Card glass className="p-4 sm:p-8">
                     <Tabs tabs={toolTabs} defaultTab="download">
                         {(activeTab) => (
                             <>

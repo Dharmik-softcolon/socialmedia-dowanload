@@ -72,20 +72,20 @@ export function UrlDownloader() {
                         icon={<Link2 className="h-4.5 w-4.5" />}
                         error={inputError ?? undefined}
                         disabled={loading}
-                        className="pr-24"
+                        className={cn(platformMeta ? "pr-20 sm:pr-32" : "pr-12")}
                     />
 
                     {/* Platform indicator */}
                     {platformMeta && !loading && (
                         <div
                             className={cn(
-                                "absolute right-14 top-1/2 -translate-y-1/2 flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-semibold uppercase tracking-wider transition-all",
+                                "absolute right-9 sm:right-12 top-1/2 -translate-y-1/2 flex items-center gap-1 sm:gap-1.5 px-1.5 py-1 rounded-md text-[10px] sm:px-2 font-semibold uppercase tracking-wider transition-all",
                                 platformMeta.bgClass,
                                 platformMeta.iconColor
                             )}
                         >
                             {detectedPlatform && platformIcons[detectedPlatform]}
-                            {platformMeta.name}
+                            <span className="hidden sm:inline">{platformMeta.name}</span>
                         </div>
                     )}
 
@@ -94,7 +94,7 @@ export function UrlDownloader() {
                         <button
                             type="button"
                             onClick={handleClear}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                            className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                         >
                             <X className="h-4 w-4" />
                         </button>

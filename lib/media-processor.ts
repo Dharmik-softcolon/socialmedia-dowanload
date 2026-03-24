@@ -371,7 +371,7 @@ export async function downloadVideo(
     }
 
     // Store reference
-    storeJob({
+    await storeJob({
         id: jobId,
         filePath: outFile,
         fileName: `video_${maxHeight}p_${jobId.slice(0, 8)}.mp4`,
@@ -425,7 +425,7 @@ export async function extractAudio(
         throw new Error("Audio extraction produced an empty file.");
     }
 
-    storeJob({
+    await storeJob({
         id: jobId,
         filePath: expectedMp3,
         fileName: `audio_${bitrate}kbps_${jobId.slice(0, 8)}.mp3`,
@@ -490,7 +490,7 @@ export async function convertFileToMp3(
     }
 
     // ── Step 4: store job for download ───────────────────────────
-    storeJob({
+    await storeJob({
         id: jobId,
         filePath: outputPath,
         fileName: `${path.basename(originalName, path.extname(originalName))}.mp3`,

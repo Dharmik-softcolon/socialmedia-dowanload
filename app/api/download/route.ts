@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
         // MODE 2: Serve an already-processed file by jobId
         // ─────────────────────────────────────────────────────────
         if (jobId) {
-            const job = getJob(jobId);
+            const job = await getJob(jobId);
 
             if (!job) {
                 return NextResponse.json(
@@ -107,7 +107,7 @@ export async function GET(request: NextRequest) {
 
         // Run yt-dlp download (this can take a while)
         const downloadJobId = await downloadVideo(url, maxHeight);
-        const job = getJob(downloadJobId);
+        const job = await getJob(downloadJobId);
 
         if (!job || !existsSync(job.filePath)) {
             return NextResponse.json(

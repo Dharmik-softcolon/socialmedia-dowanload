@@ -39,23 +39,52 @@ export function getTempPath(filename: string): string {
 }
 
 /** Save a job reference so the download endpoint can find it later */
-export function storeJob(job: StoredJob): void {
+export async function storeJob(job: StoredJob): Promise<void> {
     jobStore.set(job.id, job);
+
+    // Persist metadata to disk so it survives server restarts/module reloads
+    try {
+        const metaPath = getTempPath(`${job.id}.json`);
+        await fs.writeFile(metaPath, JSON.stringify(job, null, 2));
+    } catch (err) {
+        console.error("[file-manager] Failed to save job metadata:", err);
+    }
 }
 
 /** Retrieve a stored job by ID */
-export function getJob(id: string): StoredJob | undefined {
-    return jobStore.get(id);
+export async function getJob(id: string): Promise<StoredJob | undefined> {
+    // Try memory first
+    const memoryJob = jobStore.get(id);
+    if (memoryJob) return memoryJob;
+
+    // Fallback: try to restore from disk
+    try {
+        const metaPath = getTempPath(`${id}.json`);
+        if (existsSync(metaPath)) {
+            const content = await fs.readFile(metaPath, "utf-8");
+            const job = JSON.parse(content) as StoredJob;
+            jobStore.set(id, job); // Cache it
+            return job;
+        }
+    } catch (err) {
+        console.error("[file-manager] Failed to restore job metadata:", err);
+    }
+
+    return undefined;
 }
 
 /** Delete a stored job and its file */
 export async function removeJob(id: string): Promise<void> {
-    const job = jobStore.get(id);
+    const job = await getJob(id);
     if (job) {
         try {
             await fs.unlink(job.filePath);
+            const metaPath = getTempPath(`${id}.json`);
+            if (existsSync(metaPath)) {
+                await fs.unlink(metaPath);
+            }
         } catch {
-            // file may already be gone — ignore
+            // files may already be gone — ignore
         }
         jobStore.delete(id);
     }

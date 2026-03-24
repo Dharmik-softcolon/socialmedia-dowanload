@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
 
         // Run yt-dlp audio extraction
         const jobId = await extractAudio(url, safeBitrate);
-        const job = getJob(jobId);
+        const job = await getJob(jobId);
 
         if (!job || !existsSync(job.filePath)) {
             return NextResponse.json(
